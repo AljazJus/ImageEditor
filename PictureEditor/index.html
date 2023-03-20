@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css.css">
+
+    </head>
+    <body onresize="sprememba()" onload="sprememba()"> 
+        <div class="ColorSettings">
+
+        <div class="selction">
+                <div class="Lab">
+                    <label > Filters:</label>
+                </div>
+            <div class="ButtonSelect">
+
+                 <button class="filterB" onclick="select('gray')"> GREY </button>
+             </br>
+                 <button class="filterB" onclick="select('green')"> GREEN </button>
+             </br>
+                 <button class="filterB" onclick="select('red')"> RED </button> 
+              </br>
+                 <button class="filterB" onclick="select('blue')"> BLUE </button>
+             </br>
+                 <button class="filterB" onclick="select('ch')"> ALL </button>
+             </br>
+                 <button class="filterB" onclick="select('pix')"> PIXLEATED </button>
+             </br>
+                 <button class="filterB" onclick="select('blurbox')"> BOX Blur </button>
+             </br>
+                 <button class="filterB" onclick="select('blurgus')"> Gauss blur </button>
+             </br>
+                 <button class="filterB" onclick="select('lap')"> Laplac </button>
+            </br>
+                 <button class="filterB" onclick="select('lap2')"> Laplac2 </button>
+             </br>
+                 <button class="filterB" onclick="select('Sobel')"> Sobel </button>
+             </br>
+                 <button class="filterB" onclick="select('inv')"> Invert </button>
+            
+            </div>
+        </div>
+    
+        <div class="selction1">
+            <button onclick="select('Default')"> DEFAULT </button>
+        </div>
+        <div class="selction2">
+            <label > Color Sloders:</label>
+            <div class="SloderBox">
+                <input onchange="slide()" calss="Slider" id="SliderRed" type="range" min="0" max="100" value="50">
+            </div>
+            <div class="SloderBox">
+                <input onchange="slide()" calss="Slider" id="SliderBlue" type="range" min="0" max="100" value="50">
+            </div>
+            <div class="SloderBox">
+                <input onchange="slide()" calss="Slider" id="SliderGreen" type="range" min="0" max="100" value="50">
+            </div>
+            <div class="SloderBox">
+                <input onchange="slide()" calss="Slider" id="SliderGama" type="range" min="0" max="100" value="50">
+            </div>
+        </div>
+            </br>
+            <select id="SelectTresh">
+                <option value="gray">Gray</option>
+                <option value="green">Green</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select>
+            <button class="selectB" onclick="thresh()">Select Treshold</button>
+
+            
+            <div class="muve">
+                <button class="undoC" onclick="Back()" >undo</button>
+                <button class="UundoC" onclick="Naprej()" >undo undo</button>
+
+
+            </div>
+            
+
+            
+        </div>
+        <div class="selction3">
+
+            <div class="vrstica1">
+                <button class="filterA" onclick="selectImg('LOOP')">LOOPS</button>
+                <button class="filterA" onclick="selectImg('loops2')">LOOPS 2</button>
+                <button class="filterA" onclick="selectImg('Cheese')">Biggi cheese</button>
+                <label for="file" class="upload" >Browse</label>
+                <input type="file" id="file"  onchange="return fileValidation()" hidden /> 
+                
+                
+
+            </div>
+
+            <div class="vestica1" >
+                <button class="filterA" onclick="selectImg('CAT')">NO CAT</button>
+                <button class="filterA" onclick="selectImg('cake')">SAD CAT</button>
+                <button class="filterA" onclick="selectImg('space')" >SPACE</button>
+                <button onclick="Dowload()" class="filterA" >Dowload</button>
+            </div>
+        </div>    
+       <script src="java.js"></script>
+    </body>
+</html>
